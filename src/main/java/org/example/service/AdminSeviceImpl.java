@@ -4,6 +4,7 @@ import org.example.dao.AdminDAO;
 import org.example.dto.AdminDTO;
 import org.example.repo.AdminRepoInterface;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +27,8 @@ public class AdminSeviceImpl implements AdminServiceInterface {
         return true;
     }
 
-    public boolean searchAdmin(String username, String password){
-        return adminRepoInterface.findByUserNameAndPassword(username, password) != null ? true : false;
+    public List<AdminDTO> searchAdmin(String username, String password){
+        return modelMapper.map(adminRepoInterface.findByUserNameAndPassword(username, password),new TypeToken<List<AdminDTO>>(){}.getType());
 
     }
 }

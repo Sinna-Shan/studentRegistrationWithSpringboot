@@ -1,9 +1,12 @@
 package org.example.service;
 
 import org.example.dto.AdminDTO;
+import org.example.dto.StudentDTO;
+
+import java.util.List;
 
 public interface AdminServiceInterface {
     boolean save(AdminDTO adminDTO);
 
-    boolean searchAdmin(String name, String password);
+    List<AdminDTO> searchAdmin(String name, String password);
 }

@@ -14,5 +14,6 @@ public interface ServiceInterface {
     List<StudentDTO> getAllStudents();
     List<StudentDTO> findByName(String firstName);
 
-    boolean deleteByNic(String nic);
+
+    boolean deleteById(int id);
 }

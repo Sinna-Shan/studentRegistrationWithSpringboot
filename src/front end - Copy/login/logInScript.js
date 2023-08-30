@@ -18,17 +18,19 @@ btn.addEventListener("click", () => {
     restFields();
     return;
   }
-  fetch(`http://localhost:8080/student/${userName.value}/${password.value}`)
+  fetch(`http://localhost:8080/admin/${userName.value}/${password.value}`)
     .then((res) => res.json())
     .then((data) => {
-      if (data) {
-        console.log(true);
+      console.log(data);
+      if (data.length != 0) {
         userName.value = "";
         password.value = "";
         window.open("../home/home.html", "_top");
       } else{
         userName.style.borderColor = "red";
         password.style.borderColor = "red";
+        userName.value='';
+        password.value='';
         restFields();
       }
     });

@@ -9,5 +9,5 @@ import java.util.List;
 public interface StudentRepo extends CrudRepository<StudentDAO,Integer> {
     StudentDAO findByNic(String nic);
     List<StudentDAO> findByFirstName(String firstName);
-    void deleteByNic(String nic);
+
 }

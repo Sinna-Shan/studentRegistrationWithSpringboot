@@ -50,8 +50,8 @@ public class StudentServiceImpl implements ServiceInterface{
     }
 
     @Override
-    public boolean deleteByNic(String nic) {
-        studentRepo.deleteByNic(nic);
+    public boolean deleteById(int id) {
+        studentRepo.deleteById(id);
         return true;
     }
 

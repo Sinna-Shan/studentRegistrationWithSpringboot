@@ -15,6 +15,8 @@ import java.sql.Blob;
 public class StudentDTO {
     @Valid
 
+    private int id;
+
     @NotBlank(message = "1")
     private String firstName;
 

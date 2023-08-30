@@ -42,8 +42,8 @@ public class StudentController {
         return serviceInterface.findByName(firstName);
     }
 
-    @DeleteMapping("/{nic}")
-    public boolean deleteByNic(@PathVariable String nic){
-        return serviceInterface.deleteByNic(nic);
+    @DeleteMapping("/{id}")
+    public boolean deleteById(@PathVariable int id){
+        return serviceInterface.deleteById(id);
     }
 }

@@ -4,10 +4,9 @@ const searchInput = document.querySelector(".search-field");
 const btnSearch = document.querySelector(".btn-search");
 const btnLogOut = document.querySelector(".btn-logout");
 
-btnLogOut.addEventListener("click",()=>{
-    window.open("../login/login.html",'_top');
-})
-
+btnLogOut.addEventListener("click", () => {
+  window.open("../login/login.html", "_top");
+});
 
 getAllStudents(findAll);
 function getAllStudents(findAll) {
@@ -17,6 +16,7 @@ function getAllStudents(findAll) {
       data.forEach((element) => {
         createCard(element);
       });
+      delCards(data);
     });
 }
 
@@ -40,6 +40,8 @@ function createCard(element) {
   nic.classList.add("card-body-h4");
   const batch = document.createElement("h4");
   batch.classList.add("card-body-h4");
+  const btnDel = document.createElement("button");
+  btnDel.classList.add("btnDel");
 
   firstName.innerHTML = element.firstName;
   lastName.innerHTML = element.lastName;
@@ -47,6 +49,7 @@ function createCard(element) {
   age.innerHTML = `<span class="card-span">Age: </span>${element.age}`;
   nic.innerHTML = `<span class="card-span">NIC: </span>${element.nic}`;
   batch.innerHTML = `<span class="card-span">Batch: </span>${element.batch}`;
+  btnDel.innerHTML = "Delete";
 
   cardHeading.appendChild(firstName);
   cardHeading.appendChild(lastName);
@@ -54,6 +57,7 @@ function createCard(element) {
   cardBody.appendChild(age);
   cardBody.appendChild(nic);
   cardBody.appendChild(batch);
+  cardBody.appendChild(btnDel);
   card.appendChild(cardHeading);
   card.appendChild(cardBody);
   container.appendChild(card);
@@ -64,23 +68,38 @@ btnSearch.addEventListener("click", () => {
     fetch(`http://localhost:8080/student/${searchInput.value}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        if (data.length !=0) {
+        if (data.length != 0) {
           container.innerHTML = "";
           data.forEach((element) => {
             createCard(element);
           });
-        }else{
-            container.innerHTML = "";
-            const h1 = document.createElement("h1");
-            h1.classList.add('card-heading-h1')
-            h1.innerHTML = "Nothing Found..!";
-            container.appendChild(h1);
+        } else {
+          container.innerHTML = "";
+          const h1 = document.createElement("h1");
+          h1.classList.add("card-heading-h1");
+          h1.innerHTML = "Nothing Found..!";
+          container.appendChild(h1);
         }
       });
-  }else{
+  } else {
     container.innerHTML = "";
     getAllStudents(findAll);
   }
 });
 
+function delCards(data){
+  const delCards = document.querySelectorAll(".btnDel");
+        const Cards = document.querySelectorAll(".card");
+        for (let i = 0; i < delCards.length; i++) {
+          delCards[i].addEventListener("click", () => {
+            fetch(`http://localhost:8080/student/${data[i].id}`, {
+              method: "DELETE",
+            })
+              .then((res) => res.json())
+              .then((del) => {
+                console.log(data.id);
+                container.removeChild(Cards[i]);
+              });
+          });
+        }
+}
