@@ -1,10 +1,13 @@
 package org.example.dto;
 
+import jakarta.persistence.Lob;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.sql.Blob;
 
 @Data
 @AllArgsConstructor
@@ -33,9 +36,8 @@ public class StudentDTO {
 
     @NotBlank(message = "7")
     private String batch;
-    @NotBlank(message = "8")
-    private String userName;
 
-    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%]).{8,20}", message = "9")
-    private String password;
+    @Lob
+    private Blob image;
+
 }

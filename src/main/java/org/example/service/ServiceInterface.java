@@ -8,5 +8,11 @@ import java.util.List;
 public interface ServiceInterface {
     public StudentDAO saveStudent(StudentDTO studentDTO);
 
-    boolean isMatch(String userName, String password);
+
+    boolean updateStudent(StudentDTO studentDTO);
+
+    List<StudentDTO> getAllStudents();
+    List<StudentDTO> findByName(String firstName);
+
+    boolean deleteByNic(String nic);
 }

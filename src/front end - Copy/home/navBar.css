@@ -1,0 +1,65 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.950);
+    z-index: 1;
+}
+
+.logo{
+   
+}
+.heading {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+  }
+span{
+    color: rgb(255, 140, 0);
+}
+.tabs{
+
+}
+
+ul li{
+    float: left;
+    padding: 10px;
+    width: 100px;
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    transition: .3s ease-in-out;
+}
+.nav-link:hover{
+    color: rgb(255, 140, 0);
+}
+.btn-logout{
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    letter-spacing:1px;
+    transition: .3s ease-in-out;
+}
+
+.btn-logout:hover{
+    background-color: rgb(255, 140, 0);
+    color: rgb(255, 255, 255);
+}

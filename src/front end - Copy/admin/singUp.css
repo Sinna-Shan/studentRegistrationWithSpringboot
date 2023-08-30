@@ -1,0 +1,129 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://img.freepik.com/free-vector/linear-flat-abstract-lines-pattern_23-2148951851.jpg?w=740&t=st=1692778843~exp=1692779443~hmac=7a34e70dfb6e63b0f67c8317a0cea654a67249f0c743ba628a49257616334262");
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 140, 0, 0.307);
+}
+
+.right{
+    background-image: url("https://images.pexels.com/photos/5076522/pexels-photo-5076522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 700px;
+    border-bottom-right-radius: 200px;
+    border-bottom: 10px solid rgb(255, 140, 0);
+    border-right: 50px solid rgb(255, 140, 0);
+}
+
+.right-heading{
+    margin-right: 50px;
+    padding-right: 20px;
+    margin-top: 100px;
+    font-size: 54px;
+    text-align: right;
+    font-weight: bolder;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    border-right: 10px solid rgb(255, 140, 0);
+    line-height: 100px;
+    background-color: rgba(255, 140, 0, 0.334);
+}
+
+.right-h1-span{
+    color: rgb(0, 0, 0);
+    font-size: 54px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    background-color:  rgb(255, 255, 255);
+}
+.heading{
+    width: 100%;
+    background-color: rgb(255, 140, 0);
+    color: white;
+    margin: 0;
+    padding : 20px 0px 20px 0px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+table{
+    position: relative;
+    margin: 20px;
+    min-height: 600px;
+}
+
+.keys{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-field{
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: rgb(226, 226, 226);
+    outline: none;
+}
+
+.input-field:hover{
+    border-bottom: 3px solid rgb(255, 140, 0);
+}
+
+input[type='radio']{
+    accent-color: rgb(255, 140, 0);
+    outline: none;
+}
+.rdoBtn{
+    color: white;
+    font-size: 30px;
+}
+
+.error{
+    font-size: 16px;
+    color: rgb(255, 140, 0);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+
+.star{
+    color: red;
+    font-size: 24px;
+}
+
+#btnReg{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 140, 0);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+}
+
+#btnReg:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 140, 0);
+    border-bottom: 3px solid rgb(255, 140, 0);
+}
+

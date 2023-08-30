@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Blob;
+
 @Entity
 @Table(name = "student")
 @Data
@@ -21,6 +23,5 @@ public class StudentDAO {
     private String nic;
     private String address;
     private String batch;
-    private String userName;
-    private String password;
+
 }

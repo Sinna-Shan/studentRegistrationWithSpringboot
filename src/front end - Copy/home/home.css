@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("https://img.freepik.com/free-vector/linear-flat-abstract-lines-pattern_23-2148951851.jpg?w=740&t=st=1692778843~exp=1692779443~hmac=7a34e70dfb6e63b0f67c8317a0cea654a67249f0c743ba628a49257616334262");
+}
+
+.main-container{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.search{
+    height: 100px;
+    padding-top: 50px;
+}
+.search-field{
+    width: 500px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgb(255, 140, 0);
+    border-right: 3px solid rgb(255, 140, 0);
+    border-bottom-right-radius: 30px;
+    background-color:  rgba(0, 0, 0, 0.348);
+    padding-left: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.btn-search{
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-left: 20px;
+    border: none;
+    border-top: 3px solid rgb(255, 140, 0);
+    border-right: 5px solid rgb(255, 140, 0);
+    color: white;
+    background-color:  rgba(0, 0, 0, 0.950);
+    outline: none;
+    transition: .3s ease-in-out;
+}
+
+.btn-search:hover{
+    border-top: 3px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    background-color: rgb(255, 140, 0);
+    color: rgb(255, 255, 255);
+}
+.card{
+    width: 300px;
+    max-height: 370px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 20px;
+    color: aliceblue;
+    border-radius: 30px;
+    border: 8px solid rgb(255, 140, 0);
+    border-inline: 10px;
+}
+
+.card-heading{
+    display: flex;
+    align-items: flex-start;
+    justify-content:end;
+    flex-direction: column;
+    min-height: 150px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+}
+
+.card-heading-h1{
+    color: rgb(255, 140, 0);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 25px;
+    font-size: 56px;
+}
+
+.card-heading-h4{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 25px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(255, 140, 0);
+}
+
+.cardBody{
+    display: flex;
+    align-items: flex-start;
+    justify-content:end;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.card-body-h4{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 25px;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.card-span{
+    color: rgb(255, 140, 0);
+    font-style: italic;
+}
